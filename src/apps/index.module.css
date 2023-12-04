@@ -1,9 +1,15 @@
 .main__layout {
-  height: 100vh;
+  height: 100%;
 }
-
+.main__header,
+.main__content {
+  padding: 0 2rem;
+}
 .main__header {
-  padding: 0;
   height: 5rem;
-  position: relative;
+  position: sticky;
+  z-index: 1;
+  width: 100%;
+  background-color: inherit;
+  border-bottom: 1px solid #3f3f46;
 }
