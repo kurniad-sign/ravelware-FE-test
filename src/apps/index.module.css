@@ -1,0 +1,9 @@
+.main__layout {
+  height: 100vh;
+}
+
+.main__header {
+  padding: 0;
+  height: 5rem;
+  position: relative;
+}
