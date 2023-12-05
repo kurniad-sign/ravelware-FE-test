@@ -1,32 +1,26 @@
-import { ConfigProvider, Layout, theme } from 'antd';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 
-import { Navigation } from '@/components/navigation';
+import { AppLayout } from './layout';
+import DashboardRoute from './routes/dashboard';
+import FuelTransactionRoute from './routes/report/fuel-transaction';
 
-import style from './index.module.css';
-
-const { Header, Footer, Sider, Content } = Layout;
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<AppLayout />}>
+      <Route path="/" element={<DashboardRoute />} />
+      <Route
+        path="/report/fuel-transaction-history"
+        element={<FuelTransactionRoute />}
+      />
+    </Route>
+  )
+);
 
 export default function App() {
-  return (
-    <ConfigProvider
-      theme={{
-        algorithm: theme.darkAlgorithm,
-        token: {
-          fontFamily: 'Geist, system-ui, Avenir, Helvetica, Arial, sans-serif',
-          fontSize: 14,
-        },
-      }}
-    >
-      <Layout className={style.main__layout}>
-        <Header className={style.main__header}>
-          <Navigation />
-        </Header>
-        <Layout className={style.main__content}>
-          <Sider className={style.main__sidebar}>Sidebar</Sider>
-          <Content>Content App</Content>
-        </Layout>
-        <Footer>Footer</Footer>
-      </Layout>
-    </ConfigProvider>
-  );
+  return <RouterProvider router={router} />;
 }

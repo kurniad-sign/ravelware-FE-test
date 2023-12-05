@@ -1,17 +1,14 @@
 @font-face {
   font-family: 'Geist';
-  font-style: normal; /* See note below */
+  font-style: normal;
   font-weight: 100 900;
   src: url(../src/assets/fonts/GeistVariableVF.woff2) format('woff2');
 }
 
 :root {
-  line-height: 1.5;
-  font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -1,5 +1,6 @@
 .main__layout {
   height: 100%;
+  background-color: inherit;
 }
 .main__header,
 .main__content {
@@ -12,4 +13,16 @@
   width: 100%;
   background-color: inherit;
   border-bottom: 1px solid #3f3f46;
+}
+.main__content {
+  gap: 2rem;
+  background-color: inherit;
+}
+.main__sidebar {
+  padding: 2rem 0;
+  padding-right: 2rem;
+}
+.main__layout__content {
+  padding: 2rem 0;
+  padding-left: 2rem;
 }
